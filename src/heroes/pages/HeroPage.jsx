@@ -25,7 +25,7 @@ export const HeroPage = () => {
     if( !hero ){
         return <Navigate to='/marvel' />
     }
-    const heroImg = `https://lucianor23.github.io/heroes-spa/heroes/${ id }.jpg`
+    const heroImg = `./heroes/${ id }.jpg`
 
     return (
         <div className="row mt-5">
