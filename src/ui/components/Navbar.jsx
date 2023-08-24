@@ -26,8 +26,11 @@ export const Navbar = () => {
             >
                 Associations
             </Link>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div className="navbar-collapse">
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
 
                     <NavLink 
@@ -50,14 +53,15 @@ export const Navbar = () => {
                         Search
                     </NavLink>
                 </div>
-            </div>
-
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
+                <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
                     <span className='nav-item nav-link text-info'>{ user?.name }</span>
                     <button onClick={ onLogout } className='nav-item nav-link btn'>Logout</button>
                 </ul>
             </div>
+            </div>
+
+            
         </nav>
     )
 }

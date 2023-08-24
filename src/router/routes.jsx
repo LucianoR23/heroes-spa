@@ -17,7 +17,7 @@ export const router =  createHashRouter([
         ),
     },
     {
-        path: "/",
+        path: "*",
         errorElement: <ErrorPage />,
         element: (
             <PrivateRoute>
