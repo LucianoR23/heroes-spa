@@ -25,11 +25,12 @@ export const HeroPage = () => {
     if( !hero ){
         return <Navigate to='/marvel' />
     }
+    const heroImg = `./heroes/${ id }.jpg`
 
     return (
         <div className="row mt-5">
             <div className="col-4">
-                <img src={ `/heroes/${ id }.jpg` } alt={ hero.superhero } className="img-thumbnail animate__animated animate__fadeInLeft" />
+                <img src={ heroImg } alt={ hero.superhero } className="img-thumbnail animate__animated animate__fadeInLeft" />
             </div>
             <div className="col-8">
                 <h3>{ hero.superhero }</h3>
